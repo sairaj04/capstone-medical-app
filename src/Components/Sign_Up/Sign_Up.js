@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Sign_Up.css";
+
 const Sign_Up = () => {
     return (
         <div className="container" style={{ marginTop: "5%" }}>
