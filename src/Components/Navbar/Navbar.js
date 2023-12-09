@@ -41,6 +41,16 @@ const Navbar = () => {
             setUsername(storedemail);
         }
     }, []);
+
+    useEffect(() => {
+        // Check if the user is already logged in
+        const storedUsername = sessionStorage.getItem("name");
+
+        if (storedUsername) {
+            setIsLoggedIn(true);
+            setUsername(storedUsername);
+        }
+    }, []);
     return (
         <nav>
             <div className="nav__logo">
@@ -66,6 +76,9 @@ const Navbar = () => {
                 </li>
                 {isLoggedIn ? (
                     <>
+                        <li className="link welcome-user">
+                            Welcome, {username}
+                        </li>
                         <li className="link">
                             <button className="btn2" onClick={handleLogout}>
                                 Logout
