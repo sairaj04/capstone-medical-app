@@ -6,6 +6,7 @@ import Sign_Up from './Components/Sign_Up/Sign_Up';
 import Login from './Components/Login/Login';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
 import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
+import DoctorCard from "./Components/DoctorCard/DoctorCard"
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/Login" element={<Login />} />
                     <Route path="/instant-consultation" element={<InstantConsultation />} />
                     <Route path='/finddoctor' element={<FindDoctorSearch/>}/>
+                    <Route path='/doctor-card' element={<DoctorCard/>}/>
                     
                 </Routes>
             </BrowserRouter>
