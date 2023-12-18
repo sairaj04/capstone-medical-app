@@ -6,7 +6,7 @@ import Sign_Up from './Components/Sign_Up/Sign_Up';
 import Login from './Components/Login/Login';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
 import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
-import BookingConsultation from './Components/BookingConsultation/BookingConsultation';
+import BookingConsultation from './Components/BookingConsultation';
 
 function App() {
     return (

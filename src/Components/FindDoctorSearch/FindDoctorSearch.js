@@ -47,4 +47,4 @@ const FindDoctorSearch = () => {
         </div>
     )
 }
-export default FindDoctorSearch
+export default FindDoctorSearch;

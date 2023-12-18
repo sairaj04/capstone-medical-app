@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import './DoctorCard.css';
-import AppointmentForm from './AppointmentForm/AppointmentForm'
+import AppointmentForm from '../AppointmentForm/AppointmentForm';
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -51,7 +51,7 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
                     </div>
                 </div>
 
-                <div className="doctor-card-options-container">
+                {/* <div className="doctor-card-options-container">
                     <Popup
                         style={{ backgroundColor: '#FFFFFF' }}
                         trigger={
@@ -99,7 +99,7 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
                             </div>
                         )}
                     </Popup>
-                </div>
+                </div> */}
             </div>
 
             <div className="doctor-card-container">
@@ -121,7 +121,8 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
+
     );
 };
 
