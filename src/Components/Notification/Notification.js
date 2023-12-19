@@ -9,7 +9,7 @@ const Notification = ({ children }) => {
     const [appointmentData, setAppointmentData] = useState(null);
 
     useEffect(() => {
-        const storedUsername = sessionStorage.getItem('email');
+        const storedUsername = sessionStorage.getItem('name');
         const storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
         const storedAppointmentData = JSON.parse(localStorage.getItem(storedDoctorData?.name));
 
@@ -36,23 +36,27 @@ const Notification = ({ children }) => {
                         <div className="appointment-card__content">
                             <h3 className="appointment-card__title">Appointment Details</h3>
                             <p className="appointment-card__message">
-                                <strong>Doctor:</strong> {doctorData?.name}
+                                <strong>Doctor:</strong> {doctorData.name}
                             </p>
                             <p className="appointment-card__message">
-                                <strong>Speciality:</strong> {doctorData?.speciality}
+                                <strong>Speciality:</strong> {doctorData.speciality}
                             </p>
-                            <p className="appointment-card__message">
-                                <strong>Name:</strong> {appointmentData?.name}
-                            </p>
-                            <p className="appointment-card__message">
-                                <strong>Phone Number:</strong> {appointmentData?.phoneNumber}
-                            </p>
-                            <p className="appointment-card__message">
-                                <strong>Date of Appointment:</strong> {appointmentData?.date}
-                            </p>
-                            <p className="appointment-card__message">
-                                <strong>Time Slot:</strong> {appointmentData?.time}
-                            </p>
+                            {appointmentData.map(appointment => (
+                                <div key={appointment.id}>
+                                    <p className="appointment-card__message">
+                                        <strong>Name:</strong> {appointment.name}
+                                    </p>
+                                    <p className="appointment-card__message">
+                                        <strong>Phone Number:</strong> {appointment.phoneNumber}
+                                    </p>
+                                    <p className="appointment-card__message">
+                                        <strong>Date of Appointment:</strong> {appointment.date}
+                                    </p>
+                                    <p className="appointment-card__message">
+                                        <strong>Time Slot:</strong> {appointment.time}
+                                    </p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </>
