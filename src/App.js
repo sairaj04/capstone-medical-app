@@ -13,8 +13,8 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                <Navbar />
                 <Notification>
+                    <Navbar />
                     <Routes>
                         <Route path="/LandingPage" element={<LandingPage />} />
                         <Route path="/Sign_Up" element={<Sign_Up />} />
